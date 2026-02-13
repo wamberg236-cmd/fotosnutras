@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Mulher Definida - Sua Melhor Versão</title>
+    
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '428652660326894'); 
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=428652660326894&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        customYellow: '#ffff00',
+                        customWhite: '#ffffff',
+                        customBlack: '#000000',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Importação do Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, .font-heading { font-family: 'Montserrat', sans-serif; }
+        
+        /* Gradiente Feminino Poderoso (Pink to Purple) */
+        .gradient-text {
+            background: linear-gradient(to right, #ec4899, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Botão Vibrante */
+        .btn-gradient {
+            background: linear-gradient(90deg, #db2777 0%, #7c3aed 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(90deg, #be185d 0%, #6d28d9 100%);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px -5px rgba(236, 72, 153, 0.6); /* Sombra Pink */
+        }
+
+        .pulse-glow {
+            animation: pulse-pink 2s infinite;
+        }
+        @keyframes pulse-pink {
+            0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(236, 72, 153, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+        }
+
+        .bg-parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* Overlays com tons de roxo/azul escuro para elegância */
+        .overlay-hero {
+            background: linear-gradient(to bottom, rgba(88, 28, 135, 0.8), rgba(17, 24, 39, 0.9));
+        }
+
+        .overlay-offer {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(253, 242, 248, 0.95)); /* Tom rosado bem claro */
+        }
+
+        .offer-glow {
+            box-shadow:
+                0 0 0 2px rgba(255, 255, 255, 0.06),
+                0 30px 120px rgba(0, 0, 0, 0.8),
+                0 0 60px rgba(236, 72, 153, 0.18);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #16a34a !important;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #16a34a !important;
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+        .btn-pulse {
+            animation: pulse-green 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-customBlack text-customWhite overflow-x-hidden">
+
+    <!-- Barra de Urgência Fixa (Gradiente Pink/Roxo) -->
+    <div class="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 text-white text-center py-3 text-xs md:text-sm font-bold uppercase tracking-wider sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-center items-center gap-2 animate-pulse">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span>Últimas vagas do Desafio com Bônus Exclusivo Hoje!</span>
+        </div>
+    </div>
+
+    <!-- DOBRA 1 - VSL e CTA -->
+    <section class="min-h-screen py-10 px-4 flex flex-col items-center justify-center relative bg-parallax" style="background-image: url('https://images.unsplash.com/photo-1518310383802-640c2de311b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');">
+        <div class="absolute inset-0 bg-black/75"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900/70 to-black/70"></div>
+        <div class="max-w-4xl w-full mx-auto text-center z-10 relative">
+            <h2 class="text-2xl md:text-4xl lg:text-5xl font-black mb-8 leading-tight drop-shadow-lg">
+                <span class="text-customWhite">Ela Perdeu </span>
+                <span class="text-customYellow">28kg</span>
+                <span class="text-customWhite">com um super aplicativo</span>
+                <span class="text-customYellow">totalmente natural e fácil de usar</span>
+            </h2>
+
+            <div class="mb-10 w-full max-w-3xl mx-auto border-2 border-gray-800 rounded-xl">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://player-vz-6c237b89-9e9.tv.pandavideo.com.br/embed/?v=cfb0370d-b888-48fe-a921-ed0ebdf3957d"
+                        loading="lazy"
+                        allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="flex justify-center mb-6">
+                <a href="#oferta" class="btn-pulse bg-green-600 hover:bg-green-500 text-white font-black text-xl md:text-2xl py-5 px-10 rounded-full w-full md:w-auto transition-transform transform hover:scale-105 uppercase tracking-wide">
+                    Quero Receber meu Aplicativo!
+                </a>
+            </div>
+
+            <p class="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+                Para mulheres que estão prontas para uma mudança real e duradoura de <strong>transformar seu relacionamento com a comida.</strong>
+            </p>
+
+            <div class="flex justify-center">
+                <img
+                    src="https://metodosecarem20dias.com/wp-content/uploads/2025/05/compra-segura-1.png"
+                    alt="Compra Segura"
+                    width="413"
+                    height="38"
+                    class="max-w-full h-auto opacity-80">
+            </div>
+        </div>
+    </section>
+
+    <!-- DOBRA 2 - Promessa Secundária e Carrossel -->
+    <section class="bg-customWhite text-customBlack py-16 px-4">
+        <div class="max-w-5xl mx-auto text-center">
+
+
+            <div class="mb-12">
+                <h2 class="text-2xl md:text-4xl font-black mb-2 text-gray-900 uppercase tracking-tight">
+                    Confira resultados reais de nossas clientes!
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 font-medium">
+                    Resultados transformadores logo nas primeiras semanas
+                </p>
+                <div class="w-24 h-1 bg-green-500 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="swiper mySwiper w-full px-4 md:px-12 pb-12">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Antes-1.jpg" alt="Resultado Cliente 1" class="w-full h-auto rounded-xl shadow-lg border border-gray-200">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Antes-2.jpg" alt="Resultado Cliente 2" class="w-full h-auto rounded-xl shadow-lg border border-gray-200">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="WhatsApp-Image-2024-02-15-at-13.35.47.webp" alt="Resultado Cliente 3" class="w-full h-auto rounded-xl shadow-lg border border-gray-200">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="WhatsApp-Image-2024-02-15-at-13.35.48-652x1024.webp" alt="Resultado Cliente 4" class="w-full h-auto rounded-xl shadow-lg border border-gray-200">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="WhatsApp-Image-2024-02-15-at-13.35.48-1-683x1024.webp" alt="Resultado Cliente 5" class="w-full h-auto rounded-xl shadow-lg border border-gray-200">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="WhatsApp-Image-2024-02-15-at-13.35.48-2-1-1-695x1024.webp" alt="Resultado Cliente 6" class="w-full h-auto rounded-xl shadow-lg border border-gray-200">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="mt-8">
+                <a href="#oferta" class="inline-block bg-green-600 hover:bg-green-500 text-white font-black text-xl py-4 px-8 rounded-full w-full md:w-auto transition-transform transform hover:-translate-y-1 shadow-xl uppercase">
+                    Quero Estes Resultados Também
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#c8102e] text-white">
+        <div class="container mx-auto px-4 py-14 md:py-16 text-center">
+            <h2 class="text-xl md:text-2xl font-black uppercase tracking-wide">
+                Em apenas 20 dias você vai mudar
+                <br>
+                sua vida para sempre!
+            </h2>
+
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10 text-left max-w-5xl mx-auto">
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 mt-1">
+                        <i data-lucide="salad" class="w-10 h-10"></i>
+                    </div>
+                    <div>
+                        <div class="font-black uppercase">Emagrecer comendo</div>
+                        <div class="text-white/90 text-sm mt-1 leading-relaxed">Você vai aprender a se alimentar de forma prática e saudável, sem passar fome e sem dietas malucas.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 mt-1">
+                        <i data-lucide="activity" class="w-10 h-10"></i>
+                    </div>
+                    <div>
+                        <div class="font-black uppercase">Mudança de corpo</div>
+                        <div class="text-white/90 text-sm mt-1 leading-relaxed">Um método simples para eliminar gordura localizada e conquistar um corpo mais definido em poucas semanas.</div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="shrink-0 mt-1">
+                        <i data-lucide="trophy" class="w-10 h-10"></i>
+                    </div>
+                    <div>
+                        <div class="font-black uppercase">Autoestima renovada</div>
+                        <div class="text-white/90 text-sm mt-1 leading-relaxed">Você volta a se sentir confiante, feliz e com energia para viver o melhor da sua vida.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#4b1b74] text-white">
+        <div class="container mx-auto px-4 py-14 md:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <div class="text-white/80 text-xs uppercase tracking-widest font-bold">Como funciona</div>
+                    <h3 class="text-2xl md:text-3xl font-black leading-tight mt-2">
+                        Durante os próximos 20 dias
+                        <br>
+                        você terá acesso ao passo a
+                        <br>
+                        passo completo capaz de
+                        <br>
+                        eliminar toda gordura
+                        <br>
+                        indesejada, mudando seus
+                        <br>
+                        hábitos mentais
+                    </h3>
+
+                    <div class="mt-6 space-y-3 text-sm md:text-base">
+                        <div class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5"></i><span>Eliminar a gordura que te incomoda</span></div>
+                        <div class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5"></i><span>Treinar sua mente para não sentir fome excessiva</span></div>
+                        <div class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5"></i><span>Aumentar a saciedade</span></div>
+                        <div class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5"></i><span>Comer comidas gostosas sem culpa</span></div>
+                        <div class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-green-400 mt-0.5"></i><span>Nunca mais sofrer com efeito rebote</span></div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#oferta" class="inline-block bg-green-600 hover:bg-green-500 text-white font-black py-4 px-8 rounded-full w-full md:w-auto transition-transform transform hover:-translate-y-1 shadow-xl uppercase text-sm md:text-base text-center">
+                            Sim, eu quero emagrecer e perder gordura localizada!
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex justify-center md:justify-end">
+                    <img src="Design-sem-nome-2-1-250x300.png" alt="Aplicativo" class="w-[280px] md:w-[420px] h-auto drop-shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O MÉTODO (Fundo com Imagem Inspiradora) -->
+    <section class="relative">
+        <div class="relative bg-gradient-to-b from-green-600 to-green-900 text-white overflow-hidden">
+            <div class="container mx-auto px-4 py-16 md:py-20 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div data-aos="fade-right" class="max-w-xl">
+                        <h2 class="text-2xl md:text-3xl font-black uppercase leading-tight">
+                            O MÉTODO QUE
+                            <br>
+                            TRANSFORMA VIDAS!
+                        </h2>
+                        <p class="mt-4 text-white/90 text-sm md:text-base leading-relaxed">
+                            No aplicativo 20 Dias você vai ter acesso a todo um passo a passo para emagrecer sem passar fome.
+                            Você vai receber um aplicativo com diversos vídeos: Planos Alimentares, Receitas, Exercícios em vídeo Aulas e muito mais.
+                            Tudo na prática e mostrando o passo a passo para perder 5, 10, 20 até 30kg, tudo isso sem deixar de comer o que você gosta.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-left" class="flex justify-center md:justify-end">
+                        <img src="Instagram-mockup-carrossel-minimalista-branco.png" alt="Aplicativo" class="w-[320px] md:w-[420px] h-auto drop-shadow-2xl">
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0">
+                <svg viewBox="0 0 1440 120" class="w-full h-[70px] md:h-[90px]" preserveAspectRatio="none" aria-hidden="true">
+                </svg>
+            </div>
+        </div>
+
+        <div class="bg-white">
+            <div class="container mx-auto px-4 py-14 md:py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right" class="max-w-xl">
+
+                        <h3 class="text-2xl md:text-3xl font-black text-gray-900 uppercase leading-tight">
+                            ESSE TREINAMENTO É PARA
+                            <br>
+                            VOCÊ QUE...
+                        </h3>
+
+                        <div class="mt-6 space-y-3 text-gray-700 text-sm md:text-base">
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Você quer emagrecer mas não tem tempo no dia a dia</span></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Sente vergonha do seu corpo</span></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Evita se vestir bem quando sai na rua</span></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Quer voltar a ter o corpo que tinha antes da gravidez</span></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Já testou várias dietas e não teve resultado</span></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Não quer passar fome para emagrecer</span></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Quer melhorar a saúde e ter mais disposição</span></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check-circle" class="w-5 h-5 text-green-600 mt-0.5"></i><span>Quer voltar a usar as roupas esquecidas no guarda-roupa</span></div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" class="flex justify-center md:justify-end">
+                        <img src="Design-sem-nome-2-1-1-1024x1024.png" alt="Aplicativo" class="w-[260px] md:w-[360px] h-auto drop-shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 md:py-14" style="background: linear-gradient(135deg, rgba(219,39,119,1) 0%, rgba(124,58,237,1) 100%);">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-white text-xl md:text-3xl font-black leading-tight">
+                    Junte-se a mulheres que seguiram o guia e hoje estão felizes e realizadas
+                </h2>
+
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="border border-white/20 rounded-xl bg-black/20 overflow-hidden">
+                        <div class="video-wrapper">
+                            <iframe
+                                class="elementor-video-iframe"
+                                allowfullscreen
+                                allow="clipboard-write; accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                                title="Reprodutor de vídeo de youtube"
+                                src="https://www.youtube.com/embed/V6lUh4ww6Z0">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="border border-white/20 rounded-xl bg-black/20 overflow-hidden">
+                        <div class="video-wrapper">
+                            <iframe
+                                class="elementor-video-iframe"
+                                allowfullscreen
+                                allow="clipboard-write; accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                                title="Reprodutor de vídeo de youtube"
+                                src="https://www.youtube.com/embed/b-9GhaBK2AU">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="border border-white/20 rounded-xl bg-black/20 overflow-hidden">
+                        <div class="video-wrapper">
+                            <iframe
+                                class="elementor-video-iframe"
+                                allowfullscreen
+                                allow="clipboard-write; accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                                title="Reprodutor de vídeo de youtube"
+                                src="https://www.youtube.com/embed/bUxO7dGIBIY">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="py-20 relative overflow-hidden bg-parallax" style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80');">
+        <div class="absolute inset-0 bg-black/85"></div>
+        <div class="absolute inset-0" style="background: radial-gradient(800px circle at 50% 10%, rgba(236, 72, 153, 0.25), transparent 55%), radial-gradient(900px circle at 50% 90%, rgba(139, 92, 246, 0.18), transparent 60%);"></div>
+
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
+            <div data-aos="zoom-in-up" class="rounded-[2rem] border border-white/10 bg-gradient-to-b from-[#1b1520]/95 to-[#0f0b14]/95 p-8 md:p-12 offer-glow">
+                <div class="text-center mb-6">
+                    <div class="text-sm md:text-base font-black uppercase tracking-wide">
+                        <span class="text-yellow-300">⚠ ATENÇÃO</span>
+                        <span class="text-white"> – VOCÊ NÃO VERÁ ESSA OFERTA NOVAMENTE</span>
+                    </div>
+                    <div class="text-white/90 font-bold uppercase tracking-widest text-xs md:text-sm mt-1">
+                        APROVEITE, POIS É SOMENTE PARA AS 10 PRIMEIRAS
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="text-white/80 font-bold uppercase tracking-widest text-xs md:text-sm">
+                        AS VAGAS DO APLICATIVO SE ENCERRAM EM...
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-center gap-3 md:gap-4">
+                        <div class="bg-[#d85a4e] text-white rounded-2xl w-24 md:w-28 py-4 md:py-5 shadow-lg border border-white/10">
+                            <div id="countdown-hours" class="font-black text-4xl md:text-5xl leading-none">00</div>
+                            <div class="text-xs md:text-sm uppercase tracking-widest mt-1 opacity-90">HORAS</div>
+                        </div>
+                        <div class="bg-[#d85a4e] text-white rounded-2xl w-24 md:w-28 py-4 md:py-5 shadow-lg border border-white/10">
+                            <div id="countdown-minutes" class="font-black text-4xl md:text-5xl leading-none">15</div>
+                            <div class="text-xs md:text-sm uppercase tracking-widest mt-1 opacity-90">MINUTOS</div>
+                        </div>
+                        <div class="bg-[#d85a4e] text-white rounded-2xl w-24 md:w-28 py-4 md:py-5 shadow-lg border border-white/10">
+                            <div id="countdown-seconds" class="font-black text-4xl md:text-5xl leading-none">00</div>
+                            <div class="text-xs md:text-sm uppercase tracking-widest mt-1 opacity-90">SEGUNDOS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8 md:mt-10">
+                    <div class="text-white/90 font-semibold text-lg md:text-xl line-through decoration-2 decoration-red-500">
+                        Promoção limitada de R$ 197,00 por
+                    </div>
+                    <div class="text-white font-black text-3xl md:text-4xl mt-1">
+                        Apenas <span class="text-lime-300">8X de R$ 5,51</span>
+                    </div>
+                    <div class="text-pink-100 font-black text-4xl md:text-5xl mt-4">
+                        ou R$ 26,99 à vista
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <a 
+                    href="https://pay.cakto.com.br/32y5jcr_764549" 
+                    onclick="fbq('track', 'InitiateCheckout')" 
+                    class="block w-full bg-green-600 hover:bg-green-700 text-white font-black py-5 rounded-2xl text-center text-lg md:text-xl uppercase tracking-wide shadow-xl transition"
+                    >
+                    QUERO RECEBER MEU APLICATIVO!
+                    </a>
+                    <div class="mt-4 text-center text-white/70 text-xs md:text-sm italic uppercase tracking-wide">
+                        PAGAMENTO ÚNICO, SEM NENHUMA COBRANÇA EXTRA OU MENSALIDADES.
+                    </div>
+                    <div class="mt-3 flex items-center justify-center gap-3 text-white/70 text-xs md:text-sm">
+                        <span class="font-bold">VISA</span>
+                        <span class="opacity-70">•</span>
+                        <span class="font-bold">MASTER</span>
+                        <span class="opacity-70">•</span>
+                        <span class="font-bold">PIX</span>
+                        <span class="opacity-70">•</span>
+                        <span class="font-bold">BOLETO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-16" style="background-color: rgb(80, 17, 92);">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-white text-3xl md:text-5xl font-black leading-tight uppercase tracking-tight">
+                    Tudo é possível quando
+                    <br>
+                    você se esforça!
+                    <br>
+                    Você será a próxima a ter
+                    <br>
+                    esses resultados
+                </h2>
+            </div>
+
+            <div class="mt-10 max-w-5xl mx-auto">
+                <div class="rounded-[2rem] border border-white/35 bg-white/10 p-3 md:p-4 shadow-2xl">
+                    <img src="2-1.png" alt="Resultados" class="w-full h-auto rounded-[1.5rem]">
+                </div>
+            </div>
+
+            <div class="mt-10 max-w-4xl mx-auto">
+                <a 
+                    href="https://pay.cakto.com.br/32y5jcr_764549" 
+                    onclick="fbq('track', 'InitiateCheckout')" 
+                    class="block w-full bg-green-600 hover:bg-green-700 text-white font-black py-5 rounded-2xl text-center text-sm md:text-lg uppercase tracking-wide shadow-xl transition"
+                >
+                    Sim, eu quero emagrecer e perder
+                    <br>
+                    gordura localizada!
+                </a>
+                <div class="mt-6 flex items-center justify-center gap-3 text-white/90 text-xs md:text-sm">
+                    <span class="font-bold">VISA</span>
+                    <span class="opacity-70">•</span>
+                    <span class="font-bold">MASTER</span>
+                    <span class="opacity-70">•</span>
+                    <span class="font-bold">PIX</span>
+                    <span class="opacity-70">•</span>
+                    <span class="font-bold">BOLETO</span>
+                </div>
+                <div class="mt-3 text-center text-white/80 text-xs md:text-sm italic uppercase tracking-wide">
+                    Pagamento único, sem nenhuma cobrança extra ou mensalidades.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white text-gray-900 py-14 md:py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-2xl md:text-4xl font-black text-center">Perguntas Frequentes</h2>
+
+            <div class="mt-10 space-y-4">
+                <details class="group rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-extrabold">
+                        <span>Como eu vou receber esse guia?</span>
+                        <span class="ml-4 text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <div class="mt-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                        O acesso ao produto é imediato para pagamentos por Cartão ou Pix. Você vai receber o acesso ao programa pelo seu e-mail. Caso não consiga acessar pelo e-mail, verifique a caixa de spam/lixo eletrônico.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-extrabold">
+                        <span>Em quanto tempo eu começo a ver resultados?</span>
+                        <span class="ml-4 text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <div class="mt-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                        Os primeiros resultados podem aparecer já nas primeiras semanas, variando de pessoa para pessoa, seguindo o passo a passo e mantendo constância.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-extrabold">
+                        <span>Preciso fazer dieta rígida ou passar fome?</span>
+                        <span class="ml-4 text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <div class="mt-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                        Não. O objetivo é você aprender um plano prático e sustentável, com foco em saciedade, organização e escolhas inteligentes, sem dietas malucas.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-extrabold">
+                        <span>Quais são as formas de pagamento?</span>
+                        <span class="ml-4 text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <div class="mt-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                        Você pode pagar via Cartão, Pix ou Boleto (conforme disponibilidade no checkout).
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                    <summary class="flex cursor-pointer list-none items-center justify-between font-extrabold">
+                        <span>E se eu tiver dúvidas durante o processo?</span>
+                        <span class="ml-4 text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
+                    </summary>
+                    <div class="mt-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                        Você terá orientações claras dentro do programa. Caso precise, entre em contato pelos canais informados após a compra para suporte.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-500 py-6 text-center text-xs">
+        <p>&copy; 2024 Todos os direitos reservados. Os resultados podem variar de pessoa para pessoa.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        // Inicializa animações ao rolar (AOS)
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        function startTimer(durationSeconds, hoursEl, minutesEl, secondsEl) {
+            var timer = durationSeconds;
+            setInterval(function () {
+                var hours = parseInt(timer / 3600, 10);
+                var minutes = parseInt((timer % 3600) / 60, 10);
+                var seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : "" + hours;
+                minutes = minutes < 10 ? "0" + minutes : "" + minutes;
+                seconds = seconds < 10 ? "0" + seconds : "" + seconds;
+
+                if (hoursEl) hoursEl.textContent = hours;
+                if (minutesEl) minutesEl.textContent = minutes;
+                if (secondsEl) secondsEl.textContent = seconds;
+
+                if (--timer < 0) {
+                    timer = durationSeconds;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            // Verifica carregamento do Lucide
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.error("Lucide icons library failed to load.");
+            }
+
+            var swiperEl = document.querySelector('.mySwiper');
+            if (swiperEl && typeof Swiper !== 'undefined') {
+                new Swiper(".mySwiper", {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    },
+                });
+            }
+
+            var fifteenMinutes = 60 * 15;
+            var hoursEl = document.querySelector('#countdown-hours');
+            var minutesEl = document.querySelector('#countdown-minutes');
+            var secondsEl = document.querySelector('#countdown-seconds');
+
+            startTimer(fifteenMinutes, hoursEl, minutesEl, secondsEl);
+        };
+    </script>
+</body>
+</html>
